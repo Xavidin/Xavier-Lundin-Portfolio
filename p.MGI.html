@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Genre interactivity</title>
+  <link rel="stylesheet" href="pb.css" />
+</head>
+<body>
+  <header>
+    <a href="dv.html" class="back-link">← Back to Project Hub</a>
+  </header>
+
+  <main class="project-page">
+    <section class="project-card">
+      <div class="slider">
+
+        <div class="slide active">
+          <img src="Images/Movie Genre Interactivity.png" alt="Project preview" class="project-image">
+        </div>
+      </div>
+    
+      <div class="project-details">
+        <h2>Movie Genre interactivity</h2>
+        <p class="project-description">
+          As a Bachelor in Film and Media Studies, I was curious to see what Genres some of the top rated films were.
+        This insight could be vital in the creation and advertisement of the next big film.</p>
+        To start of this project I used a publically sourced dataset from kaggle featuring the top 5000 films on IMDb.
+        From there I:
+          <li>Cleaned and organized the data using Excel</li>
+          <li>Inputed my Excel sheet into RStudio</li>
+          <li>Explored the Tables more using functions</li>
+          <li>Added quick clean up in RStudio</li>
+          <li>Created tables and graphs to comunicate the data</li>
+         <p>From here I was able to graph and filter the data in order to get the information I set out for and was able to comunicate this information in a R Markdown;</p>
+
+      <ul class="project-info">
+  <li><strong>Technologies:</strong> Power BI</li>
+  <li><strong>RPubs:</strong> 
+    <a href="https://rpubs.com/Xavidin/1299817" target="_blank" rel="noopener noreferrer"> Movie Genre Interactivity
+    </a>
+  </li>
+  <li><strong>Dataset:</strong> 
+    <a href="https://www.kaggle.com/datasets/tiagoadrianunes/imdb-top-5000-movies" target="_blank" rel="noopener noreferrer">
+    Kaggle</a>
+  </li>
+</ul>
+
+      </div>
+    </section>    
+  </main>
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    
+    function moveSlide(dir) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + dir + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+    
+    // Auto-play every 5 seconds
+    let autoSlideInterval = setInterval(() => {
+      moveSlide(1);
+    }, 5000);
+
+    const slider = document.querySelector('.slider');
+
+slider.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+slider.addEventListener('mouseleave', () => {
+  autoSlideInterval = setInterval(() => moveSlide(1), 5000);
+});
+
+    </script>
+</body>
+</html>

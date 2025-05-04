@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Supplement Sales</title>
+  <link rel="stylesheet" href="pb.css" />
+</head>
+<body>
+  <header>
+    <a href="dv.html" class="back-link">← Back to Project Hub</a>
+  </header>
+
+  <main class="project-page">
+    <section class="project-card">
+      <div class="slider">
+        <div class="slide active">
+          <video src="Images/Food Stock.mp4" muted autoplay loop></video>
+        </div>
+        <div class="slide">
+          <img src="Images/Fast Food Stock.png" alt="Project preview" class="project-image">
+        </div>
+        <!-- Add more .slide blocks as needed -->
+        <button class="slider-btn left" onclick="moveSlide(-1)">❮</button>
+        <button class="slider-btn right" onclick="moveSlide(1)">❯</button>
+      </div>
+    
+      <div class="project-details">
+        <h2>Fast Food Stock</h2>
+        <p class="project-description">
+          Wanted to find the current prices and performance of fast food stocks.</p>
+          <li>Created a dashboard format where I could imput information</li>
+          <li>Inputed familiar fast food brand and converted to stock format in the Data section</li>
+          <li>Used Excel's Stock feature to input other values so it would consistently update</li>
+          <li>Used conditional formating to make table cells more visually appealing</li>
+         <p>At this point I realized I wanted to treat this like a real stock profile and track gains and loses.
+          The main problem was that I did not have any personal information to use. </p>
+
+         <p>To calculate for more personalized attributes I:</p>
+         </p>
+          <li>Generated a random amount of shares</li>
+          <li>Found the 52 week high and low using Excel's Stock feature</li>
+          <li>Generated a randomized user buy-in price using RANDBETWEEN function</li>
+        <ul class="project-info">
+          <li><strong>Technologies:</strong> Excel</li>
+          <li><strong>Completed:</strong> April 2025</li>
+        </ul>
+      </div>
+    </section>    
+  </main>
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    
+    function moveSlide(dir) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + dir + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+    
+    // Auto-play every 5 seconds
+    let autoSlideInterval = setInterval(() => {
+      moveSlide(1);
+    }, 5000);
+
+    const slider = document.querySelector('.slider');
+
+slider.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+slider.addEventListener('mouseleave', () => {
+  autoSlideInterval = setInterval(() => moveSlide(1), 5000);
+});
+
+    </script>
+</body>
+</html>

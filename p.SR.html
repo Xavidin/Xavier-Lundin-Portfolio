@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grocery Store Sales</title>
+  <link rel="stylesheet" href="pb.css" />
+</head>
+<body>
+  <header>
+    <a href="dv.html" class="back-link">← Back to Project Hub</a>
+  </header>
+
+  <main class="project-page">
+    <section class="project-card">
+      <div class="slider">
+        <div class="slide active">
+          <video src="Images/PBI interactivity.mp4" muted autoplay loop></video>
+        </div>
+        <div class="slide">
+          <img src="Images/Sales and Revenue.png" alt="Project preview" class="project-image">
+        </div>
+        <div class="slide">
+          <img src="Images/GSA.3.png" alt="Project preview" class="project-image">
+        </div>
+        <button class="slider-btn left" onclick="moveSlide(-1)">❮</button>
+        <button class="slider-btn right" onclick="moveSlide(1)">❯</button>
+      </div>
+    
+      <div class="project-details">
+        <h1>Grocery Store Sales</h1>
+        <p class="project-description">
+          Course based project from Udemy. Here I pulled together some of my dashboards including a general one, one focussing on revunue, and a comparative analysis on global sales and revenue.
+        </p>
+          <p>Project Highlights:</p>
+         <li>Merged multiple big datasets</li>
+         <li>Utilized Power BI's interactive functions including Tooltips</li>
+         <li>Generated new measures using Dax functions</li>
+        </p>
+        <ul class="project-info">
+          <li><strong>Technologies:</strong> Power BI</li>
+          <li><strong>Completed:</strong> March 2025</li>
+          <li><strong>Data:</strong> <a href="https://www.udemy.com/course/15-days-of-power-bi/learn/lecture/40365442?start=15#overview" target="_blank">Udemy</a></li>
+          <li><strong>Certfication:</strong> <img src="Images/Power BI Cert.jpg">
+        </ul>
+      </div>
+    </section>    
+  </main>
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    
+    function moveSlide(dir) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + dir + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+    
+    // Auto-play every 5 seconds
+    let autoSlideInterval = setInterval(() => {
+      moveSlide(1);
+    }, 5000);
+
+    const slider = document.querySelector('.slider');
+
+slider.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+slider.addEventListener('mouseleave', () => {
+  autoSlideInterval = setInterval(() => moveSlide(1), 5000);
+});
+
+    </script>
+</body>
+</html>

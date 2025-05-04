@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Supplement Sales</title>
+  <link rel="stylesheet" href="pb.css" />
+</head>
+<body>
+  <header>
+    <a href="dv.html" class="back-link">← Back to Project Hub</a>
+  </header>
+
+  <main class="project-page">
+    <section class="project-card">
+      <div class="slider">
+        <div class="slide active">
+          <video src="Images/Supplement Sales.mp4" muted autoplay loop></video>
+        </div>
+        <div class="slide">
+          <img src="Images/Supplement Sales.png" alt="Project preview" class="project-image">
+        </div>
+        <button class="slider-btn left" onclick="moveSlide(-1)">❮</button>
+        <button class="slider-btn right" onclick="moveSlide(1)">❯</button>
+      </div>
+    
+      <div class="project-details">
+        <h1>Supplement Sales</h1>
+        <p class="project-description">
+        </p>
+        <div class="image-text-container">
+          <div class="text-content">
+            <p>More practice with Power BI! At this point, it had quickly become my favorite data visualization tool. 
+              Analyzed sales of supplements by category, product, location, and platform.</p>
+            <li>Full interactivity with visual's attributes acting as filters</li>
+            <li>Comparative analysis of product sales and returns</li>
+            <li>Slider to easily control timeframe amongst visual</li>
+            <li>Mobile version with interactivity for easy access on the go</li>
+          </div>
+          <img src="Images/SS.2.jpg" alt="Mobile View" class="mobile-image" />
+        </div>
+        
+        
+        <ul class="project-info">
+          <li><strong>Technologies:</strong> Power BI</li>
+          <li><strong>Data:</strong> <a href="https://www.kaggle.com/datasets/zahidmughal2343/supplement-sales-data" target="_blank">Kaggle</a></li>
+        </ul>
+      </div>
+    </section>    
+  </main>
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    
+    function moveSlide(dir) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + dir + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+    
+    // Auto-play every 5 seconds
+    let autoSlideInterval = setInterval(() => {
+      moveSlide(1);
+    }, 5000);
+
+    const slider = document.querySelector('.slider');
+
+slider.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+slider.addEventListener('mouseleave', () => {
+  autoSlideInterval = setInterval(() => moveSlide(1), 5000);
+});
+
+    </script>
+</body>
+</html>
