@@ -1036,37 +1036,28 @@ html, body {
   gap: 2rem;
 }
 
-.contact-left,
-.contact-right {
-  flex: 1 1 300px;
-  min-width: 250px;
-}
-
-.divider {
-  display: none; /* Hide on mobile by default */
-}
-
-
-  .contact-content {
+.contact-content {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     gap: 1.5rem;
   }
 
-  .contact-left,
-  .contact-right {
+  .contact-left, .contact-right {
+    width: 100%;
     text-align: center;
   }
 
+  .divider {
+    display: none;
+  }
+
   .form-button {
-    display: inline-block;
-    margin-top: 1rem;
     padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border: none;
     background-color: #0077cc;
     color: white;
+    border: none;
     border-radius: 0.5rem;
+    font-size: 1rem;
     text-decoration: none;
   }
 
@@ -1076,8 +1067,6 @@ html, body {
   .title-container {
     padding: 1rem;
     height: auto;
-    min-height: 100svh;
-    scroll-snap-align: start;
   }
 
   .carousel-container {
@@ -1155,5 +1144,9 @@ html, body {
     width: 100%;
     overflow-x: hidden;
   }
-  
+
+    html, body {
+  scroll-snap-type: none;
+}
+
 }
