@@ -530,25 +530,7 @@ img {
   margin-top: 0.5rem;
 }
 
-.filter-dropdown {
-  display: none;
-}
 
-@media (max-width: 768px) {
-  .filter-bubbles {
-    display: none;
-  }
-
-  .filter-dropdown {
-    display: block;
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
-    border-radius: 0.5rem;
-    border: 1px solid #ccc;
-    margin-bottom: 1rem;
-  }
-}
 @media (max-width: 768px) {
   body {
     font-size: 16px;
