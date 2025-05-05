@@ -1021,6 +1021,22 @@ html, body {
     gap: 1rem;
   }
 
+
+.contact-card {
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-links a {
+    font-size: 1rem;
+  }
+    
   .section,
   .about-container,
   .title-container {
