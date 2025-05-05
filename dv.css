@@ -513,4 +513,20 @@ main, .hub-container, .project-grid {
   .overlay {
     background: rgba(0, 0, 0, 0.4); /* Slightly less intense on mobile */
   }
+
+ (max-width: 600px) {
+  .project-card h3 {
+    font-size: 1rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+  }
+
+  .project-card a {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
 }
