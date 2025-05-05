@@ -1079,7 +1079,6 @@ html, body {
   .carousel {
     flex-direction: row;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
     gap: 1rem;
   }
 
