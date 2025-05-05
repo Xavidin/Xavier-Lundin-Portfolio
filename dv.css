@@ -577,6 +577,11 @@ body {
   color: #444;
 }
 
+.project-card h3 {
+  color: #111; /* Or a fixed color like #111 */
+}
+
+
 }
 
 
