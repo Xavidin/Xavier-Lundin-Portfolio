@@ -459,6 +459,38 @@ main, .hub-container, .project-grid {
   z-index: 2;
 }
 
+.title-container {
+  min-height: auto;
+  padding: 2rem 1rem;
+}
+
+.nav-menu a {
+  padding: 1rem;
+  display: block;
+  text-align: center;
+}
+
+body {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  padding: 2rem 1rem;
+}
+
 
 @media (max-width: 768px) {
   body {
