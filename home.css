@@ -1022,25 +1022,54 @@ html, body {
   }
 
 
- .contact-content {
+.contact-section {
+  padding: 2rem 1rem;
+  background: #f8f8f8;
+  color: #222;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact-left,
+.contact-right {
+  flex: 1 1 300px;
+  min-width: 250px;
+}
+
+.divider {
+  display: none; /* Hide on mobile by default */
+}
+
+
+  .contact-content {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+
+  .contact-left,
+  .contact-right {
     text-align: center;
   }
 
-  .contact-left, .contact-right {
-    width: 100%;
-  }
-
   .form-button {
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    background: #0077cc;
-    color: white;
-    font-size: 1rem;
+    display: inline-block;
     margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    background-color: #0077cc;
+    color: white;
+    border-radius: 0.5rem;
     text-decoration: none;
   }
+
     
   .section,
   .about-container,
