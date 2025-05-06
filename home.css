@@ -1227,18 +1227,14 @@ body:not(.dark-mode) .about-body .fun-fact {
 }
 
 @media (prefers-color-scheme: dark) {
-  .contact-section,
-  .contact-section h2,
-  .contact-section h3,
-  .contact-section p,
-  .contact-section a {
-    color: #fff !important;
-  }
-
-  .contact-section a {
-    text-decoration: underline;
-  }
+.dark-mode .contact-section,
+.dark-mode .contact-section h2,
+.dark-mode .contact-section h3,
+.dark-mode .contact-section p,
+.dark-mode .contact-section a {
+  color: #fff !important;
 }
+
 
 @media (max-width: 768px) {
   .section,
