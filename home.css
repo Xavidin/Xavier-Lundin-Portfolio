@@ -1169,26 +1169,30 @@ body:not(.dark-mode) .about-body .fun-fact {
   html,
   body {
     scroll-snap-type: none !important;
+    -webkit-overflow-scrolling: auto;
     overflow-x: hidden;
+    overflow-y: auto;
   }
 
   .section,
   .snap,
+  .snap-y,
+  .snap-start,
   .page-wrapper,
-  main {
-    scroll-snap-align: none !important;
+  main,
+  .scroll-container {
     scroll-snap-type: none !important;
-    min-height: auto !important;
+    scroll-snap-align: none !important;
+    scroll-snap-stop: normal !important;
     height: auto !important;
+    min-height: auto !important;
     overflow: visible !important;
   }
+}
 
-  .title-container,
-  .about-container,
-  .carousel-container,
-  .contact-section {
+@media (max-width: 768px) {
+  [class*="snap-"] {
+    scroll-snap-type: none !important;
     scroll-snap-align: none !important;
-    min-height: auto !important;
-    height: auto !important;
   }
 }
