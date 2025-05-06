@@ -1055,7 +1055,7 @@ body:not(.dark-mode) .about-body .fun-fact {
   }
 
   /* Polaroid Card Fix */
- .consistent-polaroid {
+  .carousel-card.polaroid {
     width: 90% !important;
     max-width: 100%;
     flex: 0 0 auto;
@@ -1069,20 +1069,20 @@ body:not(.dark-mode) .about-body .fun-fact {
     background: #fff;
   }
 
-.consistent-polaroid img {
+  .carousel-card.polaroid img {
     width: 100%;
     height: auto;
     border-radius: 0.5rem;
   }
 
- .consistent-polaroid p {
+  .carousel-card.polaroid p {
     text-align: center;
     font-size: 0.95rem;
     padding-top: 0.5rem;
     color: #222;
   }
 
- .consistent-polaroid h3 {
+  .carousel-card.polaroid h3 {
     font-size: 1rem;
     margin-top: 0.5rem;
     color: #111;
@@ -1113,5 +1113,38 @@ body:not(.dark-mode) .about-body .fun-fact {
     font-size: 1rem;
     touch-action: manipulation;
   }
+}
 
+@media (max-width: 768px) {
+  .polaroid,
+  .consistent-polaroid {
+    width: 90vw !important;
+    max-width: 100% !important;
+    transform: none !important;
+    rotate: 0deg !important;
+    margin: 1rem auto;
+    padding: 0.75rem;
+    border-radius: 1rem;
+    border: 1px solid #ccc;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .polaroid img,
+  .consistent-polaroid img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+
+  .polaroid h3,
+  .polaroid p,
+  .consistent-polaroid h3,
+  .consistent-polaroid p {
+    font-size: 1rem;
+    text-align: center;
+  }
 }
