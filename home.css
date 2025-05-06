@@ -1225,3 +1225,43 @@ body:not(.dark-mode) .about-body .fun-fact {
     scroll-snap-align: none !important;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .contact-section,
+  .contact-section h2,
+  .contact-section h3,
+  .contact-section p,
+  .contact-section a {
+    color: #fff !important;
+  }
+
+  .contact-section a {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 768px) {
+  .section,
+  .title-container,
+  .about-container,
+  .carousel-container,
+  .contact-section {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+  }
+
+  .contact-section {
+    margin-bottom: 0; /* if it's the last section */
+  }
+
+  /* Optional: unify heading spacing */
+  h2, h3 {
+    margin: 0 0 1rem 0;
+  }
+
+  p {
+    margin: 0 0 1rem 0;
+  }
+}
+
