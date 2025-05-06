@@ -1055,7 +1055,7 @@ body:not(.dark-mode) .about-body .fun-fact {
   }
 
   /* Polaroid Card Fix */
-  .carousel-card.polaroid {
+ .consistent-polaroid {
     width: 90% !important;
     max-width: 100%;
     flex: 0 0 auto;
@@ -1069,20 +1069,20 @@ body:not(.dark-mode) .about-body .fun-fact {
     background: #fff;
   }
 
-  .carousel-card.polaroid img {
+.consistent-polaroid img {
     width: 100%;
     height: auto;
     border-radius: 0.5rem;
   }
 
-  .carousel-card.polaroid p {
+ .consistent-polaroid p {
     text-align: center;
     font-size: 0.95rem;
     padding-top: 0.5rem;
     color: #222;
   }
 
-  .carousel-card.polaroid h3 {
+ .consistent-polaroid h3 {
     font-size: 1rem;
     margin-top: 0.5rem;
     color: #111;
@@ -1113,4 +1113,16 @@ body:not(.dark-mode) .about-body .fun-fact {
     font-size: 1rem;
     touch-action: manipulation;
   }
+
+  .section,
+  .title-container,
+  .about-container,
+  .contact-section {
+    padding: 1rem;
+    height: auto;
+    min-height: 100svh;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+  }
+
 }
