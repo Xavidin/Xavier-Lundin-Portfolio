@@ -1248,10 +1248,9 @@ body:not(.dark-mode) .about-body .fun-fact {
   }
 
   .contact-section {
-    margin-bottom: 0; /* if it's the last section */
+    margin-bottom: 0;
   }
 
-  /* Optional: unify heading spacing */
   h2, h3 {
     margin: 0 0 1rem 0;
   }
@@ -1259,5 +1258,17 @@ body:not(.dark-mode) .about-body .fun-fact {
   p {
     margin: 0 0 1rem 0;
   }
+
+    .title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100svh;
+  text-align: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
 }
 
