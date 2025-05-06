@@ -997,123 +997,162 @@ body:not(.dark-mode) .about-body .fun-fact {
 
 
 @media (max-width: 768px) {
-  html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+  body {
     font-size: 16px;
+    padding: 0;
+    margin: 0;
   }
+    
+* {
+  box-sizing: border-box;
+}
 
-  /* Disable scroll snapping */
-  .snap,
-  .section,
-  .title-container,
-  .about-container,
-  .contact-section {
-    scroll-snap-align: none !important;
-    scroll-snap-type: none !important;
-    height: auto !important;
-    min-height: unset !important;
-    padding: 1rem;
-    box-sizing: border-box;
-  }
-
-  /* Responsive Layout */
-  .title-container h1 {
-    font-size: clamp(2rem, 6vw, 3rem);
-    text-align: center;
-    margin-bottom: 1rem;
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+  .container {
+    padding: 10px;
   }
 
   .nav-menu {
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
   }
 
-  .nav-menu a {
-    padding: 0.75rem 1.25rem;
-    width: 90%;
-    font-size: 1rem;
+
+.contact-section {
+  padding: 2rem 1rem;
+  background: transparent;
+  color: #222;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .contact-left, .contact-right {
+    width: 100%;
     text-align: center;
   }
 
-  /* Carousel & Cards */
+  .divider {
+    display: none;
+  }
+
+  .form-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+
+    
+  .section,
+  .about-container,
+  .title-container {
+    padding: 1rem;
+    height: auto;
+  }
+
+.section {
+  scroll-snap-align: start;
+
   .carousel-container {
-    overflow-x: auto;
     padding: 1rem 0.5rem;
   }
 
   .carousel {
-    display: flex;
     flex-direction: row;
+    overflow-x: auto;
     gap: 1rem;
-    scroll-snap-type: x mandatory;
-    overflow-x: scroll;
-    padding-bottom: 1rem;
   }
 
-  /* Polaroid Card Fix */
+  .carousel-card,
   .carousel-card.polaroid {
+    min-width: 85%;
     width: 90% !important;
-    max-width: 100%;
+    height: auto;
     flex: 0 0 auto;
-    margin: 0 auto;
+    scroll-snap-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    padding: 0.5rem;
     border: 1px solid #ccc;
-    border-radius: 1rem;
     transform: none;
+    margin: 0 auto;
     rotate: 0deg;
-    background: #fff;
   }
 
-  .carousel-card.polaroid img {
-    width: 100%;
-    height: auto;
+  .carousel-card img,
+  .carousel-card.polaroid img,
+  
+    img {
     border-radius: 0.5rem;
   }
+
+    img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 
   .carousel-card.polaroid p {
     text-align: center;
     font-size: 0.95rem;
     padding-top: 0.5rem;
-    color: #222;
   }
 
-  .carousel-card.polaroid h3 {
-    font-size: 1rem;
-    margin-top: 0.5rem;
-    color: #111;
-  }
-
-  /* Video & Image Responsiveness */
-  video, img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* Contact Section & Buttons */
-  .contact-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .form-button {
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
+  .title-container h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
     text-align: center;
   }
 
-  /* Improve Tapping Areas */
-  button, a {
+  .about-container {
+    text-align: left;
     font-size: 1rem;
-    touch-action: manipulation;
   }
+
+  .section h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .section p {
+    font-size: 1rem;
+  }
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.4); /* Less intense overlay */
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+  
+  html {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+    html, body {
+  scroll-snap-type: none;
 }
+
+}
+
 
 @media (max-width: 768px) {
   .polaroid,
