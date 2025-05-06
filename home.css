@@ -1014,7 +1014,6 @@ body:not(.dark-mode) .about-body .fun-fact {
     padding: 1rem;
     height: auto;
     min-height: 100svh;
-    scroll-snap-align: start;
     box-sizing: border-box;
   }
 
@@ -1054,13 +1053,11 @@ body:not(.dark-mode) .about-body .fun-fact {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    scroll-snap-type: x mandatory;
     overflow-x: scroll;
   }
 
   .carousel-card {
     flex: 0 0 85%;
-    scroll-snap-align: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     border-radius: 1rem;
     background: #fff;
@@ -1165,5 +1162,33 @@ body:not(.dark-mode) .about-body .fun-fact {
   .consistent-polaroid p {
     font-size: 1rem;
     text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    scroll-snap-type: none !important;
+    overflow-x: hidden;
+  }
+
+  .section,
+  .snap,
+  .page-wrapper,
+  main {
+    scroll-snap-align: none !important;
+    scroll-snap-type: none !important;
+    min-height: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .title-container,
+  .about-container,
+  .carousel-container,
+  .contact-section {
+    scroll-snap-align: none !important;
+    min-height: auto !important;
+    height: auto !important;
   }
 }
