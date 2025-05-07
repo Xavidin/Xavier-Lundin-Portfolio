@@ -1024,6 +1024,18 @@ body:not(.dark-mode) .about-body .fun-fact {
     margin-bottom: 1rem;
   }
 
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100svh;
+  text-align: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+
   .nav-menu {
     display: flex;
     flex-direction: column;
