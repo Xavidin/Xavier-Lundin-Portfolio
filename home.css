@@ -1365,75 +1365,83 @@ body:not(.dark-mode) .about-body .fun-fact {
 }
 }
 
-@media (max-width: 768px) {
-  .camera-section {
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .camera-frame {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-  }
-
-  .camera-slider {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .camera-slide {
-    position: relative;
-    width: 100%;
-    flex: 0 0 100%;
-    display: none; /* Hide all slides by default */
-  }
-
-  .camera-slide.active {
-    display: block; /* Show only active */
-  }
-
-  .camera-slide video {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-  }
-
-  .camera-overlay {
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    z-index: 2;
-  }
-
-  .camera-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 3;
-    background: rgba(0,0,0,0.5);
-    border: none;
-    color: white;
-    font-size: 2rem;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-  }
-
-  .camera-btn.prev {
-    left: 0.5rem;
-  }
-
-  .camera-btn.next {
-    right: 0.5rem;
-  }
+/* Fix camera slide layout on all devices */
+.camera-section {
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0 auto;
 }
 
+.camera-frame {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.camera-slider {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.camera-slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  display: none;
+}
+
+.camera-slide.active {
+  display: block;
+}
+
+/* Make video fill its slide */
+.camera-slide video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay text on top of video */
+.camera-overlay {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 2;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+}
+
+/* Navigation buttons */
+.camera-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.camera-btn.prev {
+  left: 10px;
+}
+
+.camera-btn.next {
+  right: 10px;
+}
+}
+
+    
