@@ -1330,20 +1330,36 @@ body:not(.dark-mode) .about-body .fun-fact {
 }
 
 
-  .camera-overlay {
-    position: absolute;
-    bottom: 0.5rem;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-size: 1rem;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0.5rem 0;
-    border-radius: 0 0 1rem 1rem;
-  }
+ .camera-overlay {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  color: white;
+  font-size: 1.5rem;
+  background: rgba(0,0,0,0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
 
-  .camera-btn {
-    display: none; /* Optional: hide nav buttons on mobile */
-  }
+.camera-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.camera-btn.prev {
+  left: 1rem;
+}
+
+.camera-btn.next {
+  right: 1rem;
+}
 }
