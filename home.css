@@ -1283,7 +1283,7 @@ body:not(.dark-mode) .about-body .fun-fact {
   box-sizing: border-box;
 }
 
-      .camera-section, .camera-slider,  .carousel-container, {
+      .camera-slider,  .slider, {
     padding-left: 0;
     padding-right: 0;
     margin-left: 0;
