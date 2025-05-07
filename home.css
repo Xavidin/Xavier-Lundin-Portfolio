@@ -995,7 +995,7 @@ body:not(.dark-mode) .about-body .fun-fact {
   background: transparent;
 }
 
-#title {
+.title {
   height: 100vh;
   display: flex;
   flex-direction: column;
