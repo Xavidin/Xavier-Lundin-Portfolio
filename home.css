@@ -1407,17 +1407,16 @@ body:not(.dark-mode) .about-body .fun-fact {
   display: block;
 }
 
-/* Overlay text on top of video */
 .camera-overlay {
   position: absolute;
   bottom: 1rem;
   left: 1rem;
-  z-index: 2;
   color: white;
-  background-color: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
   padding: 0.5rem 1rem;
   font-size: 1.1rem;
-  border-radius: 6px;
+  z-index: 2;
+  border-radius: 8px;
 }
 
 /* Navigation buttons */
