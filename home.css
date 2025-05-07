@@ -1154,6 +1154,7 @@ body:not(.dark-mode) .about-body .fun-fact {
     width: 100%;
     height: auto;
     border-radius: 0.5rem;
+     align-items: center;
   }
 
   .polaroid h3,
