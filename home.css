@@ -1288,187 +1288,41 @@ body:not(.dark-mode) .about-body .fun-fact {
 @media (max-width: 768px) {
   .camera-section {
     width: 100vw;
-    padding: 1rem 0;
     margin: 0;
-    box-sizing: border-box;
+    padding: 0;
+    overflow: hidden;
   }
 
   .camera-frame {
-    width: 100%;
-    overflow-x: auto;
     position: relative;
+    width: 100vw;
+    height: 65svh;
+    overflow: hidden;
   }
 
   .camera-slider {
     display: flex;
-    gap: 1rem;
-    scroll-snap-type: x mandatory;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
   }
 
- .camera-slide {
-  flex: 0 0 100%;
-  max-width: 100%;
-  height: 60vh; /* or adjust as needed */
-  position: relative;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  border-radius: 0;
-}
-
-
- .camera-slide video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 0;
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-
-
-.camera-overlay {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  z-index: 2;
-}
-
-.camera-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  background: rgba(0,0,0,0.4);
-  color: white;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
-  border-radius: 50%;
-  z-index: 2;
-}
-
-.camera-btn.prev {
-  left: 1rem;
-}
-
-.camera-btn.next {
-  right: 1rem;
-}
-}
-
-@media (max-width: 768px) {
-/* Fix camera slide layout on all devices */
-.camera-section {
-  width: 100%;
-  overflow: hidden;
-  padding: 0;
-  margin: 0 auto;
-}
-
-.camera-frame {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-.camera-slider {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  transition: transform 0.5s ease-in-out;
-}
-
-.camera-slide {
-  position: relative;
-  flex: 0 0 100%;
-  width: 100%;
-  display: none;
-}
-
-.camera-slide.active {
-  display: block;
-}
-
-/* Make video fill its slide */
-.camera-slide video {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
-
-.camera-overlay {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  color: white;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 0.5rem 1rem;
-  font-size: 1.1rem;
-  z-index: 2;
-  border-radius: 8px;
-}
-
-/* Navigation buttons */
-.camera-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 3;
-  background: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.camera-btn.prev {
-  left: 10px;
-}
-
-.camera-btn.next {
-  right: 10px;
-}
-}
-
-@media (max-width: 768px) {
-  .camera-frame {
-    width: 100vw;
-    max-height: 65svh; /* smaller, adaptive height */
+  .camera-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    display: none;
     position: relative;
     overflow: hidden;
   }
 
-  .camera-slide {
-    width: 100%;
-    max-height: 100%;
-    position: relative;
-    display: none;
-  }
-
   .camera-slide.active {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
   }
 
   .camera-slide video {
     width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* no cropping */
+    height: 100%;
+    object-fit: contain; /* No cropping */
     display: block;
   }
 
@@ -1479,11 +1333,11 @@ body:not(.dark-mode) .about-body .fun-fact {
     transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.6);
     color: white;
-    padding: 0.4rem 0.8rem;
-    border-radius: 6px;
+    padding: 0.5rem 1rem;
     font-size: 1rem;
+    border-radius: 6px;
+    z-index: 2;
     text-align: center;
-    z-index: 5;
   }
 
   .camera-btn {
@@ -1492,8 +1346,8 @@ body:not(.dark-mode) .about-body .fun-fact {
     transform: translateY(-50%);
     z-index: 3;
     background: rgba(0, 0, 0, 0.5);
-    color: white;
     border: none;
+    color: white;
     font-size: 2rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
