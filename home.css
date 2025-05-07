@@ -1282,6 +1282,14 @@ body:not(.dark-mode) .about-body .fun-fact {
   padding: 2rem 1rem;
   box-sizing: border-box;
 }
+
+      .camera-section, .camera-slider,  .carousel-container, {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100vw;
+  }
 }
 
 }
