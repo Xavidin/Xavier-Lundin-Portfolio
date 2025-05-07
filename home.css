@@ -1284,15 +1284,23 @@ body:not(.dark-mode) .about-body .fun-fact {
     margin: 0 0 1rem 0;
   }
 #title {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100svh;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1.5rem;
   box-sizing: border-box;
+  scroll-snap-align: start;
 }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 
 }
 
