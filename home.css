@@ -1272,8 +1272,7 @@ body:not(.dark-mode) .about-body .fun-fact {
   p {
     margin: 0 0 1rem 0;
   }
-
-    .title-container {
+#title {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1282,6 +1281,7 @@ body:not(.dark-mode) .about-body .fun-fact {
   text-align: center;
   padding: 2rem 1rem;
   box-sizing: border-box;
+}
 }
 
 }
