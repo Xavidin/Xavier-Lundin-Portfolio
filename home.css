@@ -1470,18 +1470,18 @@ body:not(.dark-mode) .about-body .fun-fact {
     display: block;
   }
 
-  .camera-overlay {
+ .camera-overlay {
     position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
     color: white;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0.5rem 1rem;
-    font-size: 1.1rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 1rem;
     text-align: center;
-    border-radius: 0.5rem;
-    z-index: 2;
+    z-index: 5;
   }
 
   .camera-btn {
@@ -1506,70 +1506,4 @@ body:not(.dark-mode) .about-body .fun-fact {
     right: 10px;
   }
 }
-
-@media (max-width: 768px) {
-  .camera-frame {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .camera-slider {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    position: relative;
-  }
-
-  .camera-slide {
-    width: 100%;
-    position: relative;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .camera-slide.active {
-    display: flex;
-  }
-
-  .camera-slide video {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
-  }
-
-   .camera-overlay {
-    position: absolute;
-    bottom: 12%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 0.4rem 0.8rem;
-    border-radius: 6px;
-    font-size: 1rem;
-    text-align: center;
-    z-index: 5;
-  }
-
-  .camera-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 11;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-    cursor: pointer;
-  }
-
-  .camera-btn.prev {
-    left: 10px;
-  }
 
