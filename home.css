@@ -1241,6 +1241,7 @@ body:not(.dark-mode) .about-body .fun-fact {
   .title-container,
   .about-container,
   .carousel-container,
+  .data-cleaning,
   .contact-section {
     padding: 2rem 1rem;
     margin-bottom: 2rem;
