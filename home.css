@@ -1365,6 +1365,7 @@ body:not(.dark-mode) .about-body .fun-fact {
 }
 }
 
+@media (max-width: 768px) {
 /* Fix camera slide layout on all devices */
 .camera-section {
   width: 100%;
