@@ -1283,14 +1283,48 @@ body:not(.dark-mode) .about-body .fun-fact {
   box-sizing: border-box;
 }
 
-      .camera-slider,  .slider, {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
-    width: 100vw;
-  }
 }
 
+@media (max-width: 768px) {
+  .camera-section {
+    width: 100vw;
+    padding: 1rem 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--background); /* optional */
+  }
+
+  .camera-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 0 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .camera-slide {
+    flex: 0 0 85%;
+    max-width: 85%;
+    background: var(--card-bg, #fff);
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    padding: 1rem;
+    scroll-snap-align: center;
+    box-sizing: border-box;
+  }
+
+  .camera-slide video {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+
+  .camera-slide h3 {
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--text-color, #222);
+  }
 }
 
