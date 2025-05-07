@@ -1291,40 +1291,54 @@ body:not(.dark-mode) .about-body .fun-fact {
     padding: 1rem 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: var(--background); /* optional */
+  }
+
+  .camera-frame {
+    width: 100%;
+    overflow-x: auto;
+    position: relative;
   }
 
   .camera-slider {
     display: flex;
-    overflow-x: auto;
     gap: 1rem;
     padding: 0 1rem;
     scroll-snap-type: x mandatory;
+    overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
 
   .camera-slide {
-    flex: 0 0 85%;
-    max-width: 85%;
+    flex: 0 0 90%;
+    max-width: 90%;
     background: var(--card-bg, #fff);
     border-radius: 1rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    padding: 1rem;
     scroll-snap-align: center;
-    box-sizing: border-box;
+    position: relative;
   }
 
   .camera-slide video {
     width: 100%;
     height: auto;
-    border-radius: 0.5rem;
+    display: block;
+    border-radius: 1rem;
   }
 
-  .camera-slide h3 {
-    margin-top: 0.75rem;
-    font-size: 1rem;
+  .camera-overlay {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    width: 100%;
     text-align: center;
-    color: var(--text-color, #222);
+    color: white;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 0;
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  .camera-btn {
+    display: none; /* Optional: hide nav buttons on mobile */
   }
 }
-
