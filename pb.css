@@ -249,3 +249,16 @@ h1, h2, h3, p {
   /* Additional mobile-specific styles */
 }
 
+@media (max-width: 768px) {
+  .slider {
+    height: auto;
+  }
+
+  .slide img,
+  .slide video {
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+
