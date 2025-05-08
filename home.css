@@ -995,16 +995,6 @@ body:not(.dark-mode) .about-body .fun-fact {
   background: transparent;
 }
 
-#title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  text-align: center;
-  padding: 1rem;
-  scroll-snap-align: start;
-}
 
 .title-container {
   display: flex;
@@ -1015,6 +1005,7 @@ body:not(.dark-mode) .about-body .fun-fact {
   text-align: center;
   padding: 2rem 1rem;
   box-sizing: border-box;
+  scroll-snap-align: start;
 }
 
 
