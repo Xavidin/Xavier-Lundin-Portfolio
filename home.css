@@ -1386,6 +1386,15 @@ html, body {
 .consistent-polaroid {
   margin: 1rem auto 3rem auto !important;
 }
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
     
 }
 
