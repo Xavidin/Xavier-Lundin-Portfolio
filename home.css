@@ -1029,21 +1029,17 @@ body:not(.dark-mode) .about-body .fun-fact {
     box-sizing: border-box;
   }
 
-  .title-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* ⬅️ Force full viewport height */
-    text-align: center;
-    padding: 2rem 1rem;
-    box-sizing: border-box;
-  }
-
-  .title-container h1 {
-    font-size: clamp(2rem, 6vw, 3rem);
-    text-align: center;
-    margin-bottom: 1rem;
+ .title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+}
   }
 
 
@@ -1503,17 +1499,17 @@ html, body {
     text-align: center;
   }
 
-#title {
+        .title-container {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertical centering */
-  align-items: center;     /* horizontal centering */
-  min-height: 100vh;       /* fill screen height */
-  padding: 2rem 1rem;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   text-align: center;
+  padding: 2rem 1rem;
   box-sizing: border-box;
+  scroll-snap-align: start;
 }
-
 }
 
 
