@@ -1270,7 +1270,6 @@ body:not(.dark-mode) .about-body .fun-fact {
 
 @media (max-width: 768px) {
   .section,
-  .title-container,
   .about-container,
   .carousel-container,
   .data-cleaning,
@@ -1291,17 +1290,6 @@ body:not(.dark-mode) .about-body .fun-fact {
   p {
     margin: 0 0 1rem 0;
   }
-#title {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 1.5rem;
-  box-sizing: border-box;
-  scroll-snap-align: start;
-}
 
 html, body {
   margin: 0;
@@ -1499,7 +1487,7 @@ html, body {
     text-align: center;
   }
 
-        .title-container {
+.title-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
