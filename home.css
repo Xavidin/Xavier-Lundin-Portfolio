@@ -1385,10 +1385,57 @@ html, body {
     
 }
 
-    @media (max-width: 768px) {
-  #data-cleaning {
-    padding-top: 3rem; /* Adjust value as needed */
+@media (max-width: 768px) {
+  #data-cleaning .slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  #data-cleaning .list {
+    width: 100%;
+    max-width: 90vw;
+  }
+
+  #data-cleaning video {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+  }
+
+  #data-cleaning .thumbnails {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  #data-cleaning .thumbnail-item {
+    flex: 0 1 30%;
+    max-width: 100px;
+  }
+
+  #data-cleaning .thumbnail-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+
+  #data-cleaning .content {
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  #data-cleaning .arrows {
+    margin-top: 1rem;
+    text-align: center;
   }
 }
+
 
 
