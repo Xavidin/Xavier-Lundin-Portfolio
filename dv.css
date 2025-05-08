@@ -491,7 +491,6 @@ img {
 
 body {
   font-family: sans-serif;
-  background: #fefefe;
   padding: 1rem;
   overflow-x: hidden;
 }
@@ -519,8 +518,6 @@ body {
   font-size: 0.9rem;
   border: none;
   border-radius: 0.5rem;
-  background: #0077cc;
-  color: white;
   cursor: pointer;
 }
 
@@ -557,14 +554,7 @@ body {
 
 .project-card p {
   font-size: 0.95rem;
-  color: #444;
 }
-
-.project-card h3 {
-  color: #111; /* Or a fixed color like #111 */
-}
-
-
 }
 
 @media (max-width: 768px) {
