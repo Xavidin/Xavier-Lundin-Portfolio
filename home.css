@@ -1006,6 +1006,18 @@ body:not(.dark-mode) .about-body .fun-fact {
   scroll-snap-align: start;
 }
 
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+
 @media (max-width: 768px) {
   /* General Reset & Layout */
   html, body {
