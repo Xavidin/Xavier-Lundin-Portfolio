@@ -1438,5 +1438,44 @@ html, body {
 
 }
 
+@media (max-width: 768px) {
+  .split-section {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+  }
+
+  .split-slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  .media-slider {
+    width: 90vw;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .consistent-polaroid {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto;
+  }
+
+  .consistent-polaroid video {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+
+  .caption {
+    text-align: center;
+    padding-top: 0.5rem;
+  }
+}
+
 
 
