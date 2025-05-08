@@ -248,17 +248,14 @@ h1, h2, h3, p {
 
   /* Additional mobile-specific styles */
 }
-
-@media (max-width: 768px) {
-  .slider {
-    height: auto;
-  }
-
-  .slide img,
-  .slide video {
-    height: auto;
-    object-fit: contain;
-  }
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9; /* Keeps the slider responsive */
+  margin-bottom: 2rem;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 
