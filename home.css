@@ -995,17 +995,16 @@ body:not(.dark-mode) .about-body .fun-fact {
   background: transparent;
 }
 
-.title {
-  height: 100vh;
+#title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
   text-align: center;
   padding: 1rem;
-  box-sizing: border-box;
+  scroll-snap-align: start;
 }
-
 
 @media (max-width: 768px) {
   /* General Reset & Layout */
