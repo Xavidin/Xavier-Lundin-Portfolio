@@ -1181,6 +1181,17 @@ body:not(.dark-mode) .about-body .fun-fact {
      justify-content: center;
   }
 
+.polaroid video,
+.consistent-polaroid video {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  display: block;
+ align-items: center;
+     justify-content: center;
+}
+
+
   .polaroid h3,
   .polaroid p,
   .consistent-polaroid h3,
@@ -1438,48 +1449,3 @@ html, body {
 
 }
 
-@media (max-width: 768px) {
-  .split-section.notebook-right {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .split-slider {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 0;
-  }
-
-  .media-slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
-  .polaroid,
-  .consistent-polaroid {
-    width: 90vw !important;
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .polaroid video,
-  .consistent-polaroid video {
-    width: 100% !important;
-    height: auto !important;
-    display: block;
-    border-radius: 0.5rem;
-  }
-
-  .caption {
-    padding-top: 0.5rem;
-    text-align: center;
-  }
-}
