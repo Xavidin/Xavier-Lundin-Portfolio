@@ -1390,35 +1390,11 @@ html, body {
     box-sizing: border-box;
   }
 
-  #data-cleaning .list {
-    width: 100%;
-    max-width: 90vw;
-  }
 
   #data-cleaning video {
     width: 100%;
     height: auto;
     border-radius: 1rem;
-  }
-
-  #data-cleaning .thumbnails {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1.5rem;
-    padding: 0 1rem;
-  }
-
-  #data-cleaning .thumbnail-item {
-    flex: 0 1 30%;
-    max-width: 100px;
-  }
-
-  #data-cleaning .thumbnail-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
   }
 
   #data-cleaning .content {
