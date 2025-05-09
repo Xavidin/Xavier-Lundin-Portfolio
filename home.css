@@ -1428,6 +1428,9 @@ html, body {
     align-items: center;
   }
 
+  .divider {
+    display: none;
+  }
   .media-slider {
     display: flex;
     justify-content: center;
