@@ -237,55 +237,8 @@ h1, h2, h3, p {
   }
 }
 
-/* === Base Styles for the slider === */
-.slider {
-  position: relative;
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  gap: 1rem;
-  padding-bottom: 1rem;
-}
 
-.slide {
-  flex: 0 0 100%;
-  scroll-snap-align: start;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-}
 
-.slide img,
-.slide video {
-  max-width: 90vw;
-  max-height: 60vh;
-  object-fit: contain;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* === Slider buttons === */
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.slider-btn.left {
-  left: 10px;
-}
-
-.slider-btn.right {
-  right: 10px;
-}
 
 /* === Mobile Override === */
 @media (max-width: 768px) {
