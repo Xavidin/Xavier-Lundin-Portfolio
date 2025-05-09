@@ -272,6 +272,26 @@ body {
   overflow-x: hidden;
 }
 
+@media (max-width: 768px) {
+  .slider {
+    padding: 0;
+    gap: 0;
+  }
+
+  .slide {
+    padding: 0.5rem;
+  }
+
+  .slider-btn {
+    display: none; /* Optional: hide nav buttons on mobile */
+  }
+
+  .slide img,
+  .slide video {
+    max-width: 95vw;
+    max-height: 50vh;
+  }
+}
 
 
 
