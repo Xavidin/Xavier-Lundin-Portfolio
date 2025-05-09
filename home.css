@@ -1480,3 +1480,35 @@ html, body {
 }
 
 
+/* Applies to all screen sizes */
+#title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Full viewport height */
+  padding: 0 1rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.title-container {
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Optional: tighten spacing inside the container */
+.title-container h1 {
+  margin-bottom: 1rem;
+}
+
+.title-container p {
+  margin-bottom: 0.5rem;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+
