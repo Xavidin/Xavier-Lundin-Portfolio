@@ -1411,7 +1411,7 @@ html, body {
 
     @media (max-width: 768px) {
   .split-section {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     text-align: center;
   }
