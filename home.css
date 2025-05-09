@@ -1480,7 +1480,6 @@ html, body {
 }
 
 
-/* Applies to all screen sizes */
 #title {
   display: flex;
   align-items: center;
@@ -1491,10 +1490,12 @@ html, body {
   text-align: center;
 }
 
+
 .title-container {
   max-width: 600px;
   width: 100%;
 }
+
 
 /* Optional: tighten spacing inside the container */
 .title-container h1 {
